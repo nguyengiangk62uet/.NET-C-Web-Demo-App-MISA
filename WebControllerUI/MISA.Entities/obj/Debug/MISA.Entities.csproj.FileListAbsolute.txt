@@ -1,0 +1,13 @@
+E:\MISA\WebControllerUI\MISA.Entities\bin\Debug\MISA.Entities.dll.config
+E:\MISA\WebControllerUI\MISA.Entities\bin\Debug\MISA.Entities.dll
+E:\MISA\WebControllerUI\MISA.Entities\bin\Debug\MISA.Entities.pdb
+E:\MISA\WebControllerUI\MISA.Entities\bin\Debug\EntityFramework.dll
+E:\MISA\WebControllerUI\MISA.Entities\bin\Debug\EntityFramework.SqlServer.dll
+E:\MISA\WebControllerUI\MISA.Entities\bin\Debug\EntityFramework.xml
+E:\MISA\WebControllerUI\MISA.Entities\bin\Debug\EntityFramework.SqlServer.xml
+E:\MISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.Initial.resources
+E:\MISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.csproj.GenerateResource.cache
+E:\MISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.csproj.CoreCompileInputs.cache
+E:\MISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.csproj.CopyComplete
+E:\MISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.dll
+E:\MISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.pdb

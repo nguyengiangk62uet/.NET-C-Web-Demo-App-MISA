@@ -1,0 +1,135 @@
+﻿body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+.menu {
+    width: 140px;
+    right: auto;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    margin: 0px;
+    position: absolute;
+    background-color: #026b97;
+    color: #ffffff;
+}
+
+    .menu .menu-logo {
+        height: 52px;
+        background-image: url('../../Content/Icons/logo-mshopkeeper.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #006189;
+    }
+
+    .menu .menu-item {
+        background-color: #026b97;
+        bottom: 0;
+    }
+
+    .menu .menu-item-wrap {
+        height: 40px;
+        width: 100%;
+        display: flex;
+    }
+
+        .menu .menu-item-wrap:hover {
+            height: 40px;
+            cursor: pointer;
+            background-color: #404040;
+        }
+
+    .menu .menu-item-icon {
+        width: 22px;
+        height: 38px;
+        background-image: url('../../Content/Icons/slibarmenu.png');
+        margin: 0 8px;
+    }
+
+        .menu .menu-item-icon.menu-item-icon1 {
+            background-position: 0 6px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon2 {
+            background-position: 0 -273px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon3 {
+            background-image: url('../../Content/Icons/ic_sogiaohang.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .menu .menu-item-icon.menu-item-icon4 {
+            background-position: 0 -33px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon5 {
+            background-position: 0 -75px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon6 {
+            background-position: 0 -116px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon7 {
+            background-position: 0 -154px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon8 {
+            background-position: 0 -195px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon9 {
+            background-image: url('../../Content/Icons/sms_menu.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .menu .menu-item-icon.menu-item-icon10 {
+            background-position: 0 -233px;
+        }
+
+        .menu .menu-item-icon.menu-item-icon11 {
+            background-image: url('../../Content/Icons/Logo_meInvoice.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .menu .menu-item-icon.menu-item-icon12 {
+            background-position: 0 -314px;
+        }
+
+.bottom-content-menu {
+    border-top: 1px solid #004765;
+    height: 40px;
+    margin-top: 52px;
+}
+
+    .bottom-content-menu .menu-item-icon.menu-item-icon-bottom {
+        background-position: 0 -350px;
+    }
+
+.menu .menu-item-text {
+    line-height: 35px;
+}
+
+.header {
+    position: absolute;
+    width: calc(100% - 140px);
+    left: 140px;
+    top: 0;
+    margin: 0;
+    height: 52px;
+}
+
+.content {
+    position: absolute;
+    top: 52px;
+    left: 140px;
+    bottom: 0px;
+    background-color: #b6ff00;
+    right: 0;
+}
