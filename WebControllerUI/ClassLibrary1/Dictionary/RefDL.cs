@@ -38,5 +38,18 @@ namespace MISA.DL
             }
             db.SaveChanges();
         }
+
+        //Hàm thực hiện chức năng sửa phiếu thu
+        //Người tạo NTGiang 30/07/2019
+        public void Edit(Guid _refid)
+        {
+            foreach (Ref itemNeedUpdate in db.Refs)
+            {
+                if (itemNeedUpdate.refID == _refid)
+                {
+
+                }
+            }
+        }
     }
 }

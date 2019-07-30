@@ -14,6 +14,7 @@ class Ref extends Base {
         $('.main-table tbody').on('click', 'tr .uncheck', this.tickRow);
         $('.toolbar').on('click', 'button.add-new', this.OpenDialogAdd);
         $('#dialog').on('click', 'button.save', this.AddNewRef.bind(this));
+        $('.toolbar').on('click', 'button.edit', this.OpenDialogAdd);
     }
 
     /*
