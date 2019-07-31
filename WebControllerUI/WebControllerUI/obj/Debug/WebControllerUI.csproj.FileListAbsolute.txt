@@ -146,6 +146,8 @@ E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\bin\System.Web.
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\bin\System.Web.Http.WebHost.xml
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\obj\Debug\WebControllerUI.csprojAssemblyReference.cache
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\obj\Debug\WebControllerUI.Properties.Resources.resources
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\obj\Debug\WebControllerUI.csproj.GenerateResource.cache
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\obj\Debug\WebControllerUI.csproj.CoreCompileInputs.cache
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\obj\Debug\WebControllerUI.csproj.CopyComplete
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\WebControllerUI\obj\Debug\WebControllerUI.dll

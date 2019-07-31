@@ -18,8 +18,7 @@ E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Debug\EntityF
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Debug\EntityFramework.SqlServer.dll
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Debug\EntityFramework.xml
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Debug\EntityFramework.SqlServer.xml
-E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.csprojAssemblyReference.cache
-E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.Initial.resources
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.Migrations.Initial.resources
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.csproj.GenerateResource.cache
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.csproj.CoreCompileInputs.cache
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Debug\MISA.Entities.csproj.CopyComplete

@@ -18,7 +18,7 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_DbContextDialogWidth>600</WebStackScaffolding_DbContextDialogWidth>
-    <WebStackScaffolding_DbContextTypeFullName>WebControllerUI.Models.WebControllerUIContext</WebStackScaffolding_DbContextTypeFullName>
+    <WebStackScaffolding_DbContextTypeFullName>MISA.Entities.WebControllerUIContext</WebStackScaffolding_DbContextTypeFullName>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

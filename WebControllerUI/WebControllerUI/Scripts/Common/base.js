@@ -34,13 +34,13 @@
         var fields = $('th[fieldName]');
         $('.main-table tbody').empty();
         $.each(data, function (index, item) {
-            var rowHTML = $('<tr recordID = "{0}"></tr>'.format(item["refID"]));
+            var rowHTML = $('<tr recordID = "{0}"></tr>'.format(item["RefID"]));
             $.each(fields, function (fieldIndex, fieldItem) {
                 var fieldName = fieldItem.getAttribute('fieldName');
 
                 var value = item[fieldName];
                 var cls = 'text-left';
-                if (fieldName === "refDate") {
+                if (fieldName === "RefDate") {
                     value = new Date(value);
                 }
                 var type = $.type(value);

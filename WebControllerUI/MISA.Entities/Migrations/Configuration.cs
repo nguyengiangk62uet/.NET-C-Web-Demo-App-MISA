@@ -1,4 +1,4 @@
-namespace MISA.Entities
+namespace MISA.Entities.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -9,7 +9,7 @@ namespace MISA.Entities
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MISA.Entities.WebControllerUIContext context)

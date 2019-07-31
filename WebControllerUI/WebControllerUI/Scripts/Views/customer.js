@@ -97,6 +97,7 @@ class Ref extends Base {
             var value = $(this).val();
             object[propertyName] = value;
         });
+        debugger
         $.ajax({
             method: 'POST',
             url: '/refs',

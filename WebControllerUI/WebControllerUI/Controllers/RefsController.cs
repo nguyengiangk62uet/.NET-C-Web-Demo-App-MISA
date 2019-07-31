@@ -1,87 +1,110 @@
-﻿using MISA.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
+using MISA.Entities;
+using MISA.DL;
+using WebControllerUI.Properties;
 
 namespace WebControllerUI.Controllers
 {
     public class RefsController : ApiController
     {
-        /// Thực hiện lấy dữ liệu xuống
-        /// Người tạo: Nguyễn Giang
-        //[Route("refs")]
-        //[HttpGet]
-        //public IEnumerable<Ref> Get()
-        //{
-        //    return Ref.Refs;
-        //}
+        private WebControllerUIContext db = new WebControllerUIContext();
+        private RefDL _refDL = new RefDL();
+        
+        /// <summary>
+        /// Gọi hàm lấy dữ liệu từ bảng
+        /// Người tạo NTGiang 30/07/2019
+        /// </summary>
+        [Route("refs")]
+        [HttpGet]
+        public AjaxResult GetRefs()
+        {
+            var _ajaxResult = new AjaxResult();
+            try
+            {
+                _ajaxResult.Data = _refDL.GetData();
+            }
+            catch (Exception ex)
+            {
+                _ajaxResult.Success = false;
+                _ajaxResult.Message = Resources.errorVN;
+                _ajaxResult.Data = ex;
+            }
+            return _ajaxResult;
+        }
 
-        //// Tra ve doi tuong tim kiem theo ma
-        //[Route("refs/{refno}")]
-        //[HttpGet]
-        //public IEnumerable<Ref> Get(string refno)
-        //{
-        //    List<Ref> refitems = new List<Ref>();
-        //    //var refitem = Ref.Refs.Where(p => p.refNo.Contains(refno)).FirstOrDefault();
-        //    foreach (Ref i in Ref.Refs)
-        //    {
-        //        if (i.refNo.Contains(refno))
-        //        refitems.Add(i);
-        //    }
-        //    return refitems;
-        //}
+        /// <summary>
+        /// Gọi hàm thêm mới đối tương
+        /// Người tạo NTGiang 30/07/2019
+        /// </summary>
+        /// <param name="refitem"></param>
+        [Route("refs")]
+        [HttpPost]
+        public AjaxResult Post([FromBody] Ref refitem)
+        {
+            var _ajaxResult = new AjaxResult();
+            try
+            {
+                _refDL.AddRef(refitem);
+            }
+            catch (Exception ex)
+            {
+                _ajaxResult.Success = false;
+                _ajaxResult.Message = Resources.errorVN;
+                _ajaxResult.Data = ex;
+            }
+            return _ajaxResult;
+        }
 
-        //// Them moi doi tuong
-        //[Route("refs")]
-        //[HttpPost]
-        //public void Post([FromBody] Ref refitem)
-        //{
-        //    Ref.Refs.Add(refitem);
-        //}
 
-        //// Chinh sua doi tuong
-        //[Route("refs/{refno}")]
-        //[HttpPut]
-        //public void Put(string refno, [FromBody] Ref refitem)
-        //{
-        //    foreach (Ref updateItem in Ref.Refs)
-        //    {
-        //        if (updateItem.refNo == refno)
-        //        {
-        //            updateItem.total = refitem.total;
-        //            updateItem.refDate = refitem.refDate;
-        //            updateItem.refNo = refitem.refNo;
-        //            updateItem.refType = refitem.refType;
-        //            updateItem.reason = refitem.reason;
-        //            updateItem.contactName = refitem.contactName;
-        //        }
-        //    }
+        ///Hàm xóa nhiều đối tượng
+        ///Gọi từ MISA.DL
+        [Route("refs")]
+        [HttpDelete]
+        public AjaxResult DeleteMultiple([FromBody]List<Guid> refIDs)
+        {
+            var _ajaxResult = new AjaxResult();
+            try
+            {
+                _refDL.DeleteMutiple(refIDs);
+            }
+            catch (Exception ex)
+            {
+                _ajaxResult.Success = false;
+                _ajaxResult.Message = Resources.errorVN;
+                _ajaxResult.Data = ex;
+            }
+            return _ajaxResult;
+        }
 
-        //}
 
-        //// Xoa doi tuong
-        ////[Route("refs/{refno}")]
-        ////[HttpDelete]
-        ////public void Delete(string refno)
-        ////{
-        ////    var refitem = Ref.Refs.Where(p => p.refNo == refno).FirstOrDefault();
-        ////    Ref.Refs.Remove(refitem);
-        ////}
-
+        
+       
         ///// xoa nhieu doi tuong
         ///// 
         //[Route("refs")]
         //[HttpDelete]
-        //public void DeleteMutiple([FromBody]List<String> refnos)
+        //public void DeleteMutiple([FromBody]List<Guid> refids)
         //{
-        //    foreach(var refno in refnos)
+        //    foreach (var refid in refids)
         //    {
-        //        var refitem = Ref.Refs.Where(p => p.refNo == refno).FirstOrDefault();
-        //        Ref.Refs.Remove(refitem);
+        //        var refitem = db.Refs.Where(p => p.refID == refid).FirstOrDefault();
+        //        db.Refs.Remove(refitem);
         //    }
+        //    db.SaveChanges();
+        //}
+
+        //private bool RefExists(Guid id)
+        //{
+        //    return db.Refs.Count(e => e.refID == id) > 0;
         //}
     }
 }

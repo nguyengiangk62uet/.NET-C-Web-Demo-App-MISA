@@ -49,23 +49,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dictionary\AjaxResult.cs" />
-    <Compile Include="Migrations\201907240753230_Initial.cs" />
-    <Compile Include="Migrations\201907240753230_Initial.Designer.cs">
-      <DependentUpon>201907240753230_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Dictionary\RefDetail.cs" />
     <Compile Include="Dictionary\Ref.cs" />
     <Compile Include="Dictionary\WebControllerUIContext.cs" />
+    <Compile Include="Migrations\201907310858482_Initial.cs" />
+    <Compile Include="Migrations\201907310858482_Initial.Designer.cs">
+      <DependentUpon>201907310858482_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907240753230_Initial.resx">
-      <DependentUpon>201907240753230_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907310858482_Initial.resx">
+      <DependentUpon>201907310858482_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
