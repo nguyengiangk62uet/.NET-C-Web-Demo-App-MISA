@@ -9,7 +9,8 @@ class Ref extends Base {
     }
 
     InitEventsRef() {
-        $('.listReceipt').on('click', 'tr', this.RowOnClick);
+        //$('.listReceipt').on('click', 'tr', this.RowOnClick);
+        $('.main-table tbody').on('click', 'tr', { "jsObject": this }, this.RowOnClick);
         $('.toolbar').on('click', 'button.delete', this.DeleteOnClick.bind(this));
         $('.main-table tbody').on('click', 'tr .uncheck', this.tickRow);
         $('.toolbar').on('click', 'button.add-new', this.OpenDialogAdd);
@@ -20,19 +21,77 @@ class Ref extends Base {
     /*
      Hàm thay đổi giao diện dòng khi click
     */
-    RowOnClick() {
+    RowOnClick(event) {
+        var me = event.data["jsObject"];
         $('button').removeAttr('disabled');
         $('tr').removeClass('select');
         if ($(this).hasClass('select')) {
             $(this).removeClass('select');
-            alert(1);
         } else {
             $(this).addClass('select');
-
+            me.LoadDetailTable();
         }
-       
+
     }
 
+    LoadDetailTable() {
+        var me = this;
+        var refid = me.GetRowID();
+        var fakeData = [];
+        debugger
+        $.ajax({
+            method: 'GET',
+            url: '/refdetails/' + refid,
+            success: function (res) {
+                if (res.Success) {
+                    var fields = $('.detail-table th[fieldName]');
+                    fakeData = res.Data;
+                    $('.detail-table tbody').empty();
+                    $.each(fakeData, function (index, item) {
+                        var rowHTML = $('<tr></tr>').data("recordID", item["RefID"]);
+                        $.each(fields, function (fieldIndex, fieldItem) {
+                            var fieldName = fieldItem.getAttribute('fieldName');
+                            var value = item[fieldName];
+                            var cls = 'text-left';
+                            if (fieldName === "RefDate") {
+                                value = new Date(value);
+                            }
+                            var type = $.type(value);
+                            switch (type) {
+                                case "date": value = value.formatddMMyyyy();
+                                    cls = 'text-center';
+                                    break;
+                                case "number": value = value.formatMoney();
+                                    cls = 'text-right';
+
+                                    break;
+                            }
+                            if (fieldName) {
+
+                                rowHTML.append('<td class="' + fieldName + ' ' + cls + '">' + value + '</td>');
+                            } else {
+                                rowHTML.append('<td class ="uncheck"></td>');
+                            }
+                        });
+                        $('.detail-table tbody').append(rowHTML);
+                    })
+                } else {
+                    alert(res.Message);
+                }
+            }
+        })
+    }
+
+    /**
+     * Hàm thực hiện lấy id của hàng 
+     * Người tạo: VDThang
+     * Ngày tạo: 31/07/2019
+     * */
+
+    GetRowID() {
+        var rowid = $('.select,.tick').data('recordID');
+        return rowid;
+    }
     /**
      * Delete index by click button delete
      * Creator: Nguyen Giang 19-07-2019
@@ -63,7 +122,7 @@ class Ref extends Base {
 
             }
         });
-   } 
+    }
 
     /**
      * Hàm chọn nhiều mục sản phẩm
@@ -116,9 +175,10 @@ class Ref extends Base {
         });
     }
 
+    
+
     loadData() {
         super.loadData();
     }
 
 }
-

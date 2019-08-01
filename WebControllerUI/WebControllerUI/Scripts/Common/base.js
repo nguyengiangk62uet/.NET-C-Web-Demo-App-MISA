@@ -29,16 +29,52 @@
     }
 
     /*Load dữ liệu từ mảng lên màn hình */
+    //loadData() {
+    //    var data = this.getData();
+    //    var fields = $('.main-table th[fieldName]');
+    //    $('.main-table tbody').empty();
+    //    $.each(data, function (index, item) {
+    //        var rowHTML = $('<tr recordID = "{0}"></tr>'.format(item["RefID"]));
+    //        $.each(fields, function (fieldIndex, fieldItem) {
+    //            var fieldName = fieldItem.getAttribute('fieldName');
+
+    //            var value = item[fieldName];
+    //            var cls = 'text-left';
+    //            if (fieldName === "RefDate") {
+    //                value = new Date(value);
+    //            }
+    //            var type = $.type(value);
+    //            switch (type) {
+    //                case "date": value = value.formatddMMyyyy();
+    //                    cls = 'text-center';
+    //                    break;
+    //                case "number": value = value.formatMoney();
+    //                    cls = 'text-right';
+
+    //                    break;
+    //            }
+    //            if (fieldName) {
+
+    //                rowHTML.append('<td class="' + fieldName + ' ' + cls + '">' + value + '</td>');
+    //            } else {
+    //                rowHTML.append('<td class ="uncheck"></td>');
+    //            }
+    //        });
+    //        $('.main-table tbody').append(rowHTML);
+    //    });
+    //}
+
+
     loadData() {
         var data = this.getData();
-        var fields = $('th[fieldName]');
+        var fields = $('.main-table th[fieldName]');
         $('.main-table tbody').empty();
         $.each(data, function (index, item) {
-            var rowHTML = $('<tr recordID = "{0}"></tr>'.format(item["RefID"]));
+            var rowHTML = $('<tr></tr>').data("recordID", item["RefID"]);
             $.each(fields, function (fieldIndex, fieldItem) {
                 var fieldName = fieldItem.getAttribute('fieldName');
-
                 var value = item[fieldName];
+                debugger
                 var cls = 'text-left';
                 if (fieldName === "RefDate") {
                     value = new Date(value);
@@ -50,12 +86,10 @@
                         break;
                     case "number": value = value.formatMoney();
                         cls = 'text-right';
-
                         break;
                 }
                 if (fieldName) {
-
-                    rowHTML.append('<td class="' + fieldName + ' ' + cls + '">' + value + '</td>');
+                    rowHTML.append('<td class = "{1}">{0}</td>'.format(value, cls));
                 } else {
                     rowHTML.append('<td class ="uncheck"></td>');
                 }
@@ -63,7 +97,6 @@
             $('.main-table tbody').append(rowHTML);
         });
     }
-
     SetStatusButton() {
         var sizeTable = $('.main-table tbody tr').length;
         if (sizeTable == 0) {
@@ -71,7 +104,7 @@
         }
     }
 
-    
-    
-    
+
+
+
 }

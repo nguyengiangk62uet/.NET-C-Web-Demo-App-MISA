@@ -20,6 +20,8 @@ namespace WebControllerUI.Controllers
 
         //Hàm thực hiện chức năng lấy phiếu thu chi tiết tương ứng phiếu thu
         //Người tạo NTGiang 31/07/2019
+        [Route("refdetails/{refid}")]
+        [HttpGet]
         public AjaxResult GetRefDetailByRefID(Guid refid)
         {
             var _ajaxResult = new AjaxResult();
