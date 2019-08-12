@@ -11,10 +11,12 @@
 
     /*Đổ dữ liệu vào mảng data */
     getData() {
+        var pageIndex = $('.page-index').val();
+        var pageSize = $('.page-size option:selected').val();
         var fakeData = [];
         $.ajax({
             method: 'GET',
-            url: '/refs',
+            url: '/refs/' + pageIndex + '/' + pageSize,
             async: false,
             success: function (res) {
                 if (res.Success) {
@@ -66,6 +68,7 @@
 
 
     loadData() {
+        debugger
         var data = this.getData();
         var fields = $('.main-table th[fieldName]');
         $('.main-table tbody').empty();
@@ -74,7 +77,6 @@
             $.each(fields, function (fieldIndex, fieldItem) {
                 var fieldName = fieldItem.getAttribute('fieldName');
                 var value = item[fieldName];
-                debugger
                 var cls = 'text-left';
                 if (fieldName === "RefDate") {
                     value = new Date(value);

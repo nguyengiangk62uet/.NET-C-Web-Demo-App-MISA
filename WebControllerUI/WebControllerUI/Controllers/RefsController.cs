@@ -11,6 +11,8 @@ using System.Web.Http.Description;
 using MISA.Entities;
 using MISA.DL;
 using WebControllerUI.Properties;
+using MISA.BL;
+using System.Threading.Tasks;
 
 namespace WebControllerUI.Controllers
 {
@@ -18,7 +20,8 @@ namespace WebControllerUI.Controllers
     {
         private WebControllerUIContext db = new WebControllerUIContext();
         private RefDL _refDL = new RefDL();
-        
+        private RefBL _refBL = new RefBL();
+
         /// <summary>
         /// Gọi hàm lấy dữ liệu từ bảng
         /// Người tạo NTGiang 30/07/2019
@@ -85,9 +88,29 @@ namespace WebControllerUI.Controllers
             return _ajaxResult;
         }
 
+        ///Hàm phân trang
+        ///
+        [Route("refs")]
+        [Route("refs/{pageIndex}/{pageSize}")]
+        [HttpGet]
+        public async Task<AjaxResult> GetRefs([FromUri]int pageIndex, int pageSize)
+        {
+            await Task.Delay(1000);
+            var _ajaxResult = new AjaxResult();
+            try
+            {
+                _ajaxResult.Data = _refDL.GetData();
+                _ajaxResult.Data = _refBL.GetPageData(pageIndex, pageSize);
+            }
+            catch (Exception ex) {
+                _ajaxResult.Success = false;
+                _ajaxResult.Message = Resources.errorVN;
+                _ajaxResult.Data = ex;
+            }
+            return _ajaxResult;
+        }
 
-        
-       
+
         ///// xoa nhieu doi tuong
         ///// 
         //[Route("refs")]

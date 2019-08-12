@@ -16,6 +16,15 @@ class Ref extends Base {
         $('.toolbar').on('click', 'button.add-new', this.OpenDialogAdd);
         $('#dialog').on('click', 'button.save', this.AddNewRef.bind(this));
         $('.toolbar').on('click', 'button.edit', this.OpenDialogAdd);
+
+        $(document).on('keyup', 'input.page-index', this.pagingData.bind(this));
+        $(document).on('change', '.page-size', this.loadDataByPageSize.bind(this));
+    }
+
+    pagingData(event) {
+        if (event.keyCode === 13) {
+            this.loadData();
+        }
     }
 
     /*
@@ -38,7 +47,6 @@ class Ref extends Base {
         var me = this;
         var refid = me.GetRowID();
         var fakeData = [];
-        debugger
         $.ajax({
             method: 'GET',
             url: '/refdetails/' + refid,
@@ -89,8 +97,13 @@ class Ref extends Base {
      * */
 
     GetRowID() {
-        var rowid = $('.select,.tick').data('recordID');
-        return rowid;
+        var rowid = $('.select,.tick');
+        var list = [];
+        $.each(rowid, function (index, rowItem) {
+            var item = $(rowItem).data('recordID');
+            list.push(item);
+        })
+        return list;
     }
     /**
      * Delete index by click button delete
@@ -98,12 +111,7 @@ class Ref extends Base {
      * */
     DeleteOnClick() {
         var me = this;
-        var listID = [];
-        var listRow = $('.select, .tick[recordID]');
-        $.each(listRow, function (index, item) {
-            var refid = item.getAttribute('recordID');
-            listID.push(refid);
-        });
+        var listID = me.GetRowID();
         debugger
         $.ajax({
             method: 'DELETE',
@@ -175,7 +183,10 @@ class Ref extends Base {
         });
     }
 
-    
+    loadDataByPageSize() {
+        var me = this;
+        me.loadData();
+    }
 
     loadData() {
         super.loadData();

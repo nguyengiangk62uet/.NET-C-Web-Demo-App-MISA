@@ -13,7 +13,6 @@ E:\MISA\WebControllerUI\MISA.BL\obj\Debug\MISA.BL.csproj.CoreCompileInputs.cache
 E:\MISA\WebControllerUI\MISA.BL\obj\Debug\MISA.BL.csproj.CopyComplete
 E:\MISA\WebControllerUI\MISA.BL\obj\Debug\MISA.BL.dll
 E:\MISA\WebControllerUI\MISA.BL\obj\Debug\MISA.BL.pdb
-E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\EntityFramework.xml
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\MISA.BL.dll
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\MISA.BL.pdb
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\ClassLibrary1.dll
@@ -23,6 +22,7 @@ E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\ClassLibrary1
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\ClassLibrary1.dll.config
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\MISA.Entities.pdb
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\MISA.Entities.dll.config
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Debug\EntityFramework.xml
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Debug\MISA.BL.csprojAssemblyReference.cache
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Debug\MISA.BL.csproj.CoreCompileInputs.cache
 E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Debug\MISA.BL.csproj.CopyComplete
