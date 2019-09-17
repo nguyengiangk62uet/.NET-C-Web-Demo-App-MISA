@@ -1,0 +1,391 @@
+﻿.table-content {
+    height: 300px;
+    overflow: auto;
+    width: 100%;
+}
+
+.main-table {
+    width: 100%;
+    border: 3px solid #404040;
+    border-collapse: collapse;
+}
+
+
+  
+    .main-table tbody tr {
+        height: 35px;
+    }
+
+        .main-table tbody tr:nth-child(even) {
+            background-color: #d0d0d0;
+        }
+
+
+tbody tr:hover {
+    cursor: pointer;
+}
+
+.main-table th {
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.main-table td {
+    border: 1px solid #000;
+    padding: 8px;
+}
+
+.select {
+    background-color: #ff6a00 !important;
+    color: #fff;
+}
+
+.tick {
+    background-color: #ff6a00 !important;
+    color: #fff;
+}
+
+.content .toolbar {
+    height: 35px;
+    width: 100%;
+    background-color: #026b97;
+}
+
+    .content .toolbar button {
+        height: 100%;
+        border: none;
+        background-color: #026b97;
+        color: #fff;
+        padding: 0 8px;
+        outline: none;
+        cursor: pointer;
+    }
+
+        .content .toolbar button:hover {
+            background-color: #168dbf;
+        }
+
+.content .main-content {
+    height: 500px;
+    overflow: auto;
+}
+
+    .content .main-content table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .content .main-content table tr:hover {
+            background-color: #ff6a00;
+        }
+
+        .content .main-content table th {
+            border: 1px solid #000;
+        }
+
+        .content .main-content table td {
+            border: 1px solid #000;
+        }
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/*Phan them*/
+/*
+    Không cho phép chuột bôi đen nội dung trong màn hình
+    Người tạo VDThang 19/05/2019
+*/
+body {
+    overflow: hidden;
+    font-family: 'Roboto',Tahoma,sans-serif;
+    font-size: 13px;
+    color: #404040;
+    -moz-user-select: none; /* Trên Firefox */
+    -ms-user-select: none; /* Trên Internet Explorer */
+    -webkit-user-select: none; /* Trên Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Trên Android and iOS callouts (Điện thoại - máy tính bảng)*/
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.disable-option {
+    display: none;
+}
+
+
+
+/*Content*/
+.content {
+    position: absolute;
+    left: 140px;
+    top: 52px;
+    right: 0;
+    bottom: 0;
+    padding: 8px;
+    background-color: #e2e2e2;
+}
+
+/*
+    Dàn giao diện chi tiết cho content
+    Người tạo VDThang 19/05/2019
+*/
+.grid-master {
+    position: absolute;
+    height: calc(100% - 16px);
+    top: 8px;
+    right: 8px;
+    left: 8px;
+    background-color: #fff;
+}
+
+.grid-detail {
+    position: absolute;
+    height: 20%;
+    bottom: 8px;
+    right: 8px;
+    left: 8px;
+    background-color: #ffffff;
+}
+
+/*
+    Dàn giao diện cho grid-master trong content
+    Người tạo VDThang 19/05/2019
+*/
+.cotainer-toolbar-taskbar {
+    height: 91px;
+    background-color: #fff;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+/*
+    Dàn layout cho toolbar-taskbar trong grid master
+    Người tạo VDThang 19/05/2019
+*/
+/*1.TOOLBAR*/
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36px;
+    width: 100%;
+    background-color: #026b97;
+    display: flex;
+}
+
+    /*toolbar item*/
+    .toolbar .toolbar-item {
+        color: #fff;
+        line-height: 36px;
+        padding: 0 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background-color: #026b97;
+        border: none;
+        outline: 0;
+        text-align: center;
+    }
+
+        .toolbar .toolbar-item:hover {
+            background-color: #0088c2;
+        }
+
+        .toolbar .toolbar-item:disabled {
+            cursor: default;
+            opacity: 0.5;
+        }
+
+        .toolbar .toolbar-item span {
+            padding-left: 8px;
+        }
+    /*toolbar sperator*/
+    .toolbar .sperator {
+        height: 32px;
+        margin-top: 2px;
+        border-style: solid;
+        border-width: 0 0 0 1px;
+        border-left-color: #1882ae;
+        border-right-color: #1882ae;
+    }
+
+/*2.TASKBAR*/
+.taskbar {
+    position: absolute;
+    height: 36px;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+
+    /*taskbar-item*/
+    .taskbar .taskbar-item {
+        padding-left: 8px;
+        height: 37px;
+        color: #404040;
+        line-height: 36px;
+        align-items: center;
+        display: flex;
+    }
+
+        .taskbar .taskbar-item .item-content {
+            width: 113px;
+            border: 1px solid #d0d0d0;
+            height: 35px;
+            border-radius: 3px;
+            display: flex;
+            line-height: 34px;
+        }
+
+            .taskbar .taskbar-item .item-content.search {
+                width: 150px;
+            }
+
+        .taskbar .taskbar-item span {
+            padding-right: 10px;
+        }
+
+/*Item-submit data*/
+.taskbar-item .item-content.submit {
+    width: 118px;
+    border-color: #026b97;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*Input in item taskbar*/
+.taskbar-item input {
+    width: 80px;
+    padding-right: 5px;
+    margin-left: 5px;
+    padding: 0;
+    border: 0;
+    height: 24px;
+    margin-top: 5px;
+    outline: 0;
+}
+
+/*icon downblack in first item*/
+.taskbar-item .arrow-down-black {
+    width: 28px;
+}
+
+.taskbar-item .submit span {
+    color: #026b97;
+    font-weight: 600;
+    font-size: 12px;
+    padding-left: 8px;
+}
+
+.taskbar-item .icon.getdata {
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+
+
+
+.uncheck {
+    background: url('../../Content/Icons/uncheck.png') no-repeat center;
+    width: 24px;
+}
+
+.check {
+    background: url('../../Content/Icons/check.png') no-repeat center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#dialog {
+    display: none;
+}
+
+    /*Chỉnh sửa giao diện dialog thêm mới*/
+    #dialog .contain {
+        width: 100%;
+    }
+
+        #dialog .contain.input-data {
+            height: 70%;
+            background-color: #d0d0d0;
+            display: flex;
+        }
+
+        #dialog .contain.button-data {
+            height: 30%;
+            background-color: #168dbf;
+        }
+
+/*Chỉnh sửa giao diện input-data*/
+
+.input-data .sub-contain {
+    width: 50%;
+    border: 1px solid #026b97;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.input-data input {
+    height: 25px;
+}
+
+.input-data .sub-contain .input-title {
+    display: flex;
+    margin-bottom: 8px;
+    height: 40px;
+    align-items: center;
+}
+
+
+    .input-data .sub-contain .input-title .title {
+        width: 30%;
+    }
+
+
+    .input-data .sub-contain .input-title .input {
+        width: 70%;
+    }
+
+/*Chỉnh sửa giao diện phần button-data*/
+.button-data button {
+    height: 32px;
+    width: 60px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+/*Chỉnh sửa phần table ref detail*/
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    border-top: 3px solid #404040;
+}
+
+    .detail-table th {
+        border: 1px solid #000;
+        width: 30%;
+    }
+
+    .detail-table tr {
+        height: 35px;
+    }
+
+    .detail-table td {
+        border: 1px solid #000;
+        padding: 8px;
+    }

@@ -1,0 +1,14 @@
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Release\MISA.Entities.dll.config
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Release\MISA.Entities.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Release\MISA.Entities.pdb
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Release\EntityFramework.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Release\EntityFramework.SqlServer.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Release\EntityFramework.xml
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\bin\Release\EntityFramework.SqlServer.xml
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Release\MISA.Entities.csprojAssemblyReference.cache
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Release\MISA.Entities.Migrations.Initial.resources
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Release\MISA.Entities.csproj.GenerateResource.cache
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Release\MISA.Entities.csproj.CoreCompileInputs.cache
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Release\MISA.Entities.csproj.CopyComplete
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Release\MISA.Entities.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.Entities\obj\Release\MISA.Entities.pdb

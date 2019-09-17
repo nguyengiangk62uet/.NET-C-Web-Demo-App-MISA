@@ -1,0 +1,15 @@
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\MISA.BL.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\MISA.BL.pdb
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\ClassLibrary1.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\MISA.Entities.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\EntityFramework.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\ClassLibrary1.pdb
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\ClassLibrary1.dll.config
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\MISA.Entities.pdb
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\MISA.Entities.dll.config
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\bin\Release\EntityFramework.xml
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Release\MISA.BL.csprojAssemblyReference.cache
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Release\MISA.BL.csproj.CoreCompileInputs.cache
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Release\MISA.BL.csproj.CopyComplete
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Release\MISA.BL.dll
+E:\MISA\CSharp.NETWebDemoAppMISA\WebControllerUI\MISA.BL\obj\Release\MISA.BL.pdb
